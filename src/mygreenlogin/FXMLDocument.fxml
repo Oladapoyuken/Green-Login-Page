@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mygreenlogin.FXMLDocumentController">
+   <children>
+      <Pane fx:id="pn_finish" layoutX="112.0" onMouseClicked="#handleButtonAction" prefHeight="400.0" prefWidth="586.0" style="-fx-background-color: #23EA34;">
+         <children>
+            <JFXButton fx:id="btn_finiish" layoutX="192.0" layoutY="220.0" prefHeight="38.0" prefWidth="202.0" style="-fx-background-color: #21C512;" text="FINISH" />
+            <Label alignment="CENTER" layoutX="144.0" layoutY="122.0" prefHeight="60.0" prefWidth="298.0" text="THANK YOU FOR REGISTERING">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane onMouseClicked="#handleButtonAction" prefHeight="400.0" prefWidth="114.0" style="-fx-background-color: #21C512;">
+         <children>
+            <ImageView fx:id="btn_home" fitHeight="12.0" fitWidth="19.0" layoutX="51.0" layoutY="113.0" onMouseClicked="#showHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@loginIcons/Home_16px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_contact" fitHeight="12.0" fitWidth="19.0" layoutX="51.0" layoutY="151.0" onMouseClicked="#showPersonal1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@loginIcons/Contacts_16px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_location" fitHeight="12.0" fitWidth="19.0" layoutX="51.0" layoutY="188.0" onMouseClicked="#showPersonal2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@loginIcons/Marker_16px_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_complete" fitHeight="12.0" fitWidth="19.0" layoutX="51.0" layoutY="221.0" onMouseClicked="#showFinish" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@loginIcons/Checkmark_16px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_personal2" layoutX="112.0" prefHeight="400.0" prefWidth="586.0" style="-fx-background-color: #23EA34;">
+         <children>
+            <JFXTextField fx:id="home_addr" focusColor="#0a0a0a" layoutX="209.0" layoutY="150.0" prefHeight="25.0" prefWidth="169.0" promptText="Home address" unFocusColor="#fcfafa">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btn_next2" layoutX="267.0" layoutY="267.0" onMouseClicked="#showFinish" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #21C512;" text="NEXT" />
+            <JFXTextField fx:id="country" focusColor="#0a0a0a" layoutX="209.0" layoutY="200.0" prefHeight="25.0" prefWidth="169.0" promptText="Country" unFocusColor="#fcfafa">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_personal1" layoutX="113.0" prefHeight="400.0" prefWidth="586.0" style="-fx-background-color: #23EA34;">
+         <children>
+            <JFXTextField fx:id="username" focusColor="#0a0a0a" layoutX="209.0" layoutY="150.0" prefHeight="25.0" prefWidth="169.0" promptText="Enter username" unFocusColor="#fcfafa">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#0d0d0d" layoutX="209.0" layoutY="200.0" prefHeight="25.0" prefWidth="169.0" promptText="password" unFocusColor="#fcf9f9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btn_next1" layoutX="267.0" layoutY="267.0" onMouseClicked="#showPersonal2" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #21C512;" text="NEXT" />
+         </children>
+      </Pane>
+      <Pane fx:id="pn_home" layoutX="114.0" prefHeight="400.0" prefWidth="586.0" style="-fx-background-color: #43EA34;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="68.0" layoutX="260.0" layoutY="102.0" opacity="0.35" pickOnBounds="true">
+               <image>
+                  <Image url="@loginIcons/lapsearch2.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="139.0" layoutY="181.0" prefHeight="38.0" prefWidth="310.0" text="YUKEN AUTOMATION">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_start" layoutX="193.0" layoutY="263.0" onMouseClicked="#showPersonal1" prefHeight="38.0" prefWidth="202.0" style="-fx-background-color: #21C512;" text="Start" />
+            <Label fx:id="btn_close" alignment="CENTER" layoutX="566.0" onMouseClicked="#closeWindow" prefHeight="25.0" prefWidth="20.0" text="X">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="237.0" layoutY="233.0" text="Few steps to begin : )" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
